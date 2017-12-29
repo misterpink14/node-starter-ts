@@ -1,0 +1,37 @@
+{
+  "name": "node-starter-ts",
+  "version": "0.0.1",
+  "description": "Node boilerplate in typescript",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e ts --watch 'src/**/*.ts' --exec 'yarn run start:single",
+    "start:single": "ts-node src/index.ts",
+    "start:build": "yarn run build && node ./dist/src/index.js",
+    "start:prod": "yarn run build && pm2 start ./dist/src/index.js",
+    "lint": "tslint 'src/**/*.ts'",
+    "build": "tsc",
+    "test": "nodemon -e ts --watch 'src/**/*.ts' --exec 'yarn run test:single'",
+    "test:single": "jasmine-ts src/**/*.spec.ts",
+    "clean": "rm -r node_modules/ || true && rm -r dist/ || true",
+    "clean:all": "yarn run clean && yarn run clean:yarn",
+    "clean:yarn": "rm yarn.lock"
+  },
+  "repository": "https://github.com/misterpink14/node-starter-ts",
+  "author": "misterpink14",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jasmine": "2.8.2",
+    "@types/node": "8.5.2",
+    "jasmine": "2.8.0",
+    "jasmine-core": "2.8.0",
+    "jasmine-node": "1.14.5",
+    "jasmine-ts": "0.2.1",
+    "nodemon": "1.14.3",
+    "ts-node": "4.1.0",
+    "tslint": "5.8.0"
+  },
+  "dependencies": {
+    "pm2": "2.9.1",
+    "typescript": "2.6.2"
+  }
+}

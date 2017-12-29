@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "experimentalDecorators": true,
+    "mapRoot": "",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "sourceMap": true,
+    "sourceRoot": "",
+    "target": "es6",
+    "lib": [
+      "es2015",
+      "es2016",
+      "es2017"
+    ],
+    "baseUrl": "",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "types": [
+      "jasmine",
+      "node"
+    ],
+    "paths": {}
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+		"typings"
+  ]
+}
